@@ -1,4 +1,4 @@
-![alt text](http://url/to/img.png)
+![alt text](https://raw.githubusercontent.com/ads2senac/Projeto-Interdisciplinar/master/Grupo%2001%20-%20logo_450ml.png)
 
 
 # Projeto-Interdisciplinar
