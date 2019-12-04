@@ -1,5 +1,4 @@
-![GitHub Logo](/logo_450ml.png)
-Format: ![Alt Text](url)
+![alt text](http://url/to/img.png)
 
 
 # Projeto-Interdisciplinar
