@@ -16,3 +16,10 @@ Objetivos do Projeto:
 
 ●	Disponibilizar conteúdo referente às regras, condições necessárias e informações gerais sobre a doação de sangue.
 
+Grupo - 01:
+
+      - Benedito Aragão;
+      - Gustavo Corsato;
+      - Rafael Batista;
+      - Rodrigo Dias;
+
