@@ -11,6 +11,7 @@
         <link href="cadastro.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
     </head>
+
     <body>
         <header>
             <div class="pre-cabecalho">
@@ -53,10 +54,24 @@
                     <legend>*Data de nascimento:</legend>
                     <input type="date" id="data-nascimento" class="input-padrao" required>
 
+                    <legend>*Tipo sanguíneo:</legend>
+                    <select required>
+                        <option value="">Selecione</option>                        
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="0">Não sei informar</option>
+                    </select>
+
                     <legend>*Sexo:</legend>
 
                     <label for="radio-masculino" class="checkbox">
-                        <input type="radio" name="sexo" value="M" id="radio-masculino" checked>
+                        <input type="radio" name="sexo" value="M" id="radio-masculino">
                         Masculino
                     </label>                    
                     <label for="radio-feminino" class="checkbox">
@@ -74,7 +89,7 @@
                     <input placeholder="*Cidade" type="text" id="cidade" class="input-padrao" required>
                     
                     <legend>*UF:</legend>
-                    <select>
+                    <select required>
                         <option value="">Selecione</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
