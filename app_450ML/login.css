@@ -1,0 +1,139 @@
+
+/* Fonte das letras na página */
+body {
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 62.5%;
+    background-color: #F0FFF0;
+}
+
+/* CCS - Cadastro */
+#usuario, #instituicao {
+    display: inline-block;
+    margin-top: 1em auto;
+    background: #EEC900;
+}
+
+#usuario:focus, #instituicao:focus {
+    background: orange;
+}
+
+.login-opcao {
+    width: max-content;
+    margin: 1em auto;
+}
+
+.login-opcao input {
+    width: 10em;
+    margin: .5em;
+    padding: 0;
+}
+
+#capa {
+    width:35%;
+    display: block;
+    margin: 1em auto 2em auto;
+    border: none;
+    -webkit-border-radius: 2em;
+}
+
+section {
+    width: 25%;
+    margin: 3em auto;
+    padding: 2em;
+    border: .2em solid #CCC;
+    -webkit-border-radius: .5em;
+    background-color: #FFE4E1;
+}
+
+section label, section legend {
+    display: inline-block;
+    font-size: 2em;
+    padding-right: .5em;
+}
+
+section legend:first-child {
+    margin-bottom: .5em;
+    color: rgb(158,11,15);
+}
+
+section input, select {    
+    margin-bottom: 1em;
+    margin-right: 1em;
+    background-color: #E9E9E9;
+    border: .1em solid #CCC;
+    -webkit-border-radius: .5em;
+    height: 2em;    
+    width: 20%;
+}
+
+section:hover {
+    border: .2em solid rgb(158,11,15);
+    -webkit-border-radius: .5em;
+}
+
+input:hover {
+    -webkit-border-radius: .5em;
+    box-shadow: 0px 0px .5em #2F4F4F;
+    -webkit-box-shadow: 0px 0px .5em #2F4F4F;
+    -moz-box-shadow: 0px 0px .5em #2F4F4F;
+}
+
+.input-padrao {
+    padding-left: 1em;
+}
+
+.checkbox {
+    display: inline;
+    font-size: 1.5em;
+    box-shadow: none;
+}
+
+.checkbox input{
+    display: inline;   
+    width: 1.3em;
+    margin: 0 0 0 1em;
+    vertical-align: text-top;
+    box-shadow: none;
+}
+
+#email, #senha {
+    width: 70%;
+}
+
+.botao {
+    width: auto;
+    height: 2em;
+    margin: .5em 1em 1em 0;
+    padding: 0 .5em;
+    background: #EEC900;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 2em;
+    border: none;
+    border-radius: .5em;
+}
+
+.botao:hover {
+    background: orange;   
+    border: none;
+}
+
+.navegacao-login {  
+    top: 40%;
+    right: 5%;
+}
+
+.navegacao-login li {
+    display: inline-block;
+    margin: 0 2em 0 0;
+}
+
+.navegacao-login a {
+    color: black;
+    font-size: 2em;
+    text-decoration: none; /* Remove as decorações do texto, ex: link de navegação */
+}
+
+.navegacao-login a:hover {
+    color: rgb(158,11,15);
+}

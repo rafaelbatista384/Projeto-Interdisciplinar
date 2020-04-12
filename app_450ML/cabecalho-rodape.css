@@ -1,0 +1,74 @@
+
+/* Fonte das letras na página */
+body {
+    font-family: 'Baloo Thambi 2', cursive;
+    font-size: 62.5%;
+}
+
+/* CCS - Cabeçalho */
+header {
+    background: #FFE4E1;
+}
+
+.pre-cabecalho {    
+    position: relative;
+    padding-bottom: 3em;
+    background: url("imagens/bg.jpg");
+}
+
+.pre-cabecalho nav ul {
+    top: .5em;
+}
+
+.cabecalho {
+    position: relative;
+    padding: .5% 0 .5% 3%;
+}
+
+#logo-cabecalho {
+    width: 20%;
+}
+
+.navegacao {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+.navegacao li {
+    display: inline;
+    margin: 0 0 0 1.5em;
+}
+
+.navegacao a {
+    color: rgb(158,11,15);
+    font-weight: bold;
+    font-size: 2.2em;
+    text-decoration: none; /* Remove as decorações do texto, ex: link de navegação */
+}
+
+.navegacao a:hover {
+    color: orange;
+}
+
+.cabecalho nav ul li:last-child {
+    margin-left: 5em;
+}
+
+/* CCS - Rodapé */
+footer {
+    text-align: center;
+    background: url("imagens/bg.jpg"); /* insere imagem como plano de fundo */
+    padding: 1em 0;
+}
+
+#logo-rodape {
+    width: 20%;
+}
+
+.copyright {
+    color: #FFF;
+    font-size: 2.2em;
+    margin: .5em 0 0;
+}
+

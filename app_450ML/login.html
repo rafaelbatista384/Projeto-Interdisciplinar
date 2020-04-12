@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Login - 450ml</title>
+
+        <link href="reset.css" rel="stylesheet" >
+        <link href="cabecalho-rodape.css" rel="stylesheet">
+        <link href="login.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+        
+        <script src="jquery-3.4.1.min.js"></script>
+
+        <script>            
+            $(document).ready(function(){ 
+                $(".login-usuario").hide();
+                $(".login-instituicao").hide();
+
+                $("#usuario").click(function(event){
+                event.preventDefault();
+                $(".login-usuario").show(1500);
+                $(".login-instituicao").hide(700);
+                $("#capa").hide();
+                });
+
+                $("#instituicao").click(function(event){
+                event.preventDefault();
+                $(".login-usuario").hide(700);
+                $(".login-instituicao").show(1500);
+                $("#capa").hide();
+                });
+            });
+        </script>
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="pre-cabecalho">
+                <nav>
+                    <ul class="navegacao">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </u>
+                </nav>
+            </div>
+
+            <div class="cabecalho">
+                <img id="logo-cabecalho" src="imagens\logo.png" alt="Logo do app 450ml">                
+            </div>
+        </header>
+
+        <main>
+            <div class="login-opcao">
+                    <input id="usuario" type="submit" value="Login Doador" class="botao">           
+                    <input id="instituicao" type="submit" value="Login Instituição" class="botao">
+            </div>
+
+            <img id="capa" src="imagens\capa.jpg" alt="Imagem simbolizando uma doação de sangue">            
+
+            <form>
+                <section class="login-usuario">
+                    <legend>Login doador:</legend>
+                    <input placeholder="E-mail" type="email" id="email" class="input-padrao" required>
+                    <input placeholder="Senha" type="password" id="senha" class="input-padrao" required>
+                    <br>
+                    
+                    <input type="submit" value="Login" class="botao">
+
+                    <label class="checkbox">
+                        <input type="checkbox" id="lembrar" class="input-padrao" checked>
+                        Lembrar-me
+                    </label>                    
+
+                    <nav>
+                        <ul class="navegacao-login">
+                            <li><a href="cadastro.html">Cadastre-se</a></li>
+                            <li><a href="senha.html">Esqueci a senha</a></li>
+                        </u>
+                    </nav>    
+                </section>
+            </form> 
+            
+            <form>
+                <section class="login-instituicao">
+                    <legend>Login instituição:</legend>
+                    <input placeholder="E-mail" type="email" id="email" class="input-padrao" required>
+                    <input placeholder="Senha" type="password" id="senha" class="input-padrao" required>
+                    <br>
+                    
+                    <input type="submit" value="Login" class="botao">
+                    
+                    <label class="checkbox">
+                        <input type="checkbox" class="input-padrao" checked>
+                        Lembrar-me
+                    </label>
+                    
+                    <nav>
+                        <ul class="navegacao-login">
+                            <li><a href="cadastro-instituicao.html">Cadastre-se</a></li>
+                            <li><a href="senha.html">Esqueci a senha</a></li>
+                        </u>
+                    </nav>    
+                </section>
+            </form>            
+        </main>
+        
+        <footer>
+            <img id="logo-rodape" src="imagens\logo.png" alt="Logo do app 450ml">
+            <p class="copyright">&copy; Copyright 450ml - 2020
+        </footer>
+    </body>
+</html>

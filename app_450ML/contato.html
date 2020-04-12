@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Cadastro de doador - 450ml</title>
+
+        <link href="reset.css" rel="stylesheet" >
+        <link href="cabecalho-rodape.css" rel="stylesheet">
+        <link href="contato.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="pre-cabecalho">
+                <nav>
+                    <ul class="navegacao">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </u>
+                </nav>
+            </div>
+
+            <div class="cabecalho">
+                <img id="logo-cabecalho" src="imagens\logo.png" alt="Logo do app 450ml">
+                
+                <nav>
+                    <ul class="navegacao">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="doacoes.html">DOAÇÕES</a></li>
+                        <li><a href="cadastro.html">CADASTRO</a></li>
+                        <li><a href="instituicoes.html">INSTITUIÇÕES</a></li>
+                        <li><a href="campanhas.html">CAMPANHAS</a></li>
+                        <li><a href="login.html">Sair</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h1>Contato</h1>
+
+            <form>
+                <section>
+                    <legend>Fale conosco:</legend>
+                    <input placeholder="*Nome completo" type="text" id="nome" class="input-padrao" required>
+                   
+                    <input placeholder="Idade" type="number" id="idade" class="input-padrao">
+
+                    <legend>Sexo:</legend>
+                    <label for="radio-masculino" class="checkbox">
+                        <input type="radio" name="sexo" value="M" id="radio-masculino" checked>
+                        Masculino
+                    </label>                    
+                    <label for="radio-feminino" class="checkbox">
+                        <input type="radio" name="sexo" value="F" id="radio-feminino">
+                        Feminino
+                    </label>
+                    <br><br>
+                    
+                    <label for="email">*E-mail:</label>
+                    <input type="email" id="email" class="input-padrao" placeholder="e-mail@dominio.com" required>
+                    
+                    <label for="celular">Celular:</label>
+                    <input type="tel" id="celular" class="input-padrao" placeholder="(XX) XXXXX-XXXX">
+                    
+                    <legend>*Assunto:</legend>
+                    <select id="assunto">
+                        <option value="">Outros</option>                        
+                        <option value="">Cadastro / Senha</option>
+                        <option value="">Críticas / Sugestões</option>
+                        <option value="">Elogios / Reclamações</option>
+                        <option value="">Dúvidas sobre agendamentos</option>
+                        <option value="">Dúvidas sobre doações</option>                        
+                    </select>
+                    <br>
+
+                    <label for="mensagem">*Mensagem:</label>
+                    <textarea cols="100" rows="15" id="mensagem" class="input-padrao" placeholder="Digite aqui a sua mensagem ..." required></textarea>
+                    
+                    <input type="submit" value="Enviar mensagem" class="botao">
+                </section>               
+            </form>
+        </main>
+        
+        <footer>
+            <img id="logo-rodape" src="imagens\logo.png" alt="Logo do app 450ml">
+            <p class="copyright">&copy; Copyright 450ml - 2020
+        </footer>
+    </body>
+</html>

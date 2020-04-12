@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Cadastro de instituição - 450ml</title>
+
+        <link href="reset.css" rel="stylesheet" >
+        <link href="cabecalho-rodape.css" rel="stylesheet">
+        <link href="cadastro-instituicao.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="pre-cabecalho">
+                <nav>
+                    <ul class="navegacao">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </u>
+                </nav>
+            </div>
+
+            <div class="cabecalho">
+                <img id="logo-cabecalho" src="imagens\logo.png" alt="Logo do app 450ml">
+                
+                <nav>
+                    <ul class="navegacao">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="doacoes.html">DOAÇÕES</a></li>
+                        <li><a href="cadastro.html">CADASTRO</a></li>
+                        <li><a href="instituicoes.html">INSTITUIÇÕES</a></li>
+                        <li><a href="campanhas.html">CAMPANHAS</a></li>
+                        <li><a href="login.html">Sair</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h1>Cadastro de instituição</h1>
+
+            <form>
+                <section>
+                    <legend>Dados instituicionais:</legend>
+                    <input placeholder="*Nome fantasia" type="text" id="fantasia" class="input-padrao" required>
+                    <input placeholder="*Razão social" type="text" id="razao" class="input-padrao" required>
+                    
+                    <legend>*CNPJ:</legend>
+                    <input placeholder="XX.XXX.XXX/XXXX-XX" type="number" id="cnpj" class="input-padrao" required>                                      
+                </section>
+                
+                <section>
+                    <legend>Endereço:</legend>
+                    <input placeholder="*Logradouro" type="text" id="logradouro" class="input-padrao" required>
+                    <input placeholder="*Numero" type="number" id="numero" class="input-padrao" required>
+                    <br>
+                    <input placeholder="Complemento" type="text" id="complemento" class="input-padrao">
+                    <input placeholder="*Cidade" type="text" id="cidade" class="input-padrao" required>
+                    
+                    <legend>*UF:</legend>
+                    <select>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>                
+
+                    <legend>*CEP:</legend>
+                    <input placeholder="XXXXX-XXX" type="number" id="cep" class="input-padrao" required>
+                </section>
+
+                <section>
+                    <legend>Dados do responsável:</legend>
+                    <input placeholder="*Nome" type="text" id="nome" class="input-padrao" required>
+                    <input placeholder="*Sobrenome" type="text" id="sobrenome" class="input-padrao" required>
+                    
+                    <legend>*CPF:</legend>
+                    <input placeholder="XXX.XXX.XXX-XX" type="number" id="cpf" class="input-padrao" required>
+                                    
+                    <legend>*Data de nascimento:</legend>
+                    <input type="date" id="data-nascimento" class="input-padrao" required>
+
+                    <legend>*Sexo:</legend>
+
+                    <label for="radio-masculino" class="checkbox">
+                        <input type="radio" name="sexo" value="M" id="radio-masculino" checked>
+                        Masculino
+                    </label>                    
+                    <label for="radio-feminino" class="checkbox">
+                        <input type="radio" name="sexo" value="F" id="radio-feminino">
+                        Feminino
+                    </label>                    
+                </section>
+
+                <section>
+                    <legend>Contato:</legend>
+                    <label for="email">*E-mail do responsável:</label>
+                    <input type="email" id="email" class="input-padrao" placeholder="e-mail@dominio.com" required>
+                    <label class="checkbox">
+                        <input type="checkbox" class="input-padrao" checked>
+                        Aceito receber notificações por e-mail
+                    </label>
+                    <br>
+
+                    <label for="celular">*Celular do responsável:</label>
+                    <input type="tel" id="celular" class="input-padrao" placeholder="(XX) XXXXX-XXXX" required>
+                    <label class="checkbox">
+                        <input type="checkbox" class="input-padrao" checked>
+                        Aceito receber notificações por SMS
+                    </label>
+
+                    <label for="telefone">*Telefone da instituição:</label>
+                    <input type="tel" id="celular" class="input-padrao" placeholder="(XX) XXXX-XXXX" required>
+                </section>
+
+                <section>
+                    <legend>Nova senha:</legend>
+                    <input placeholder="Informe a sua senha de 6 a 10 caracteres" type="password" id="senha" class="input-padrao" required>
+                    <br>
+                    <input placeholder="Confirme a sua senha" type="password" id="senha" class="input-padrao" required>                    
+                </section>
+
+                <input type="submit" value="Enviar formulário" class="botao">
+            </form>
+        </main>
+        
+        <footer>
+            <img id="logo-rodape" src="imagens\logo.png" alt="Logo do app 450ml">
+            <p class="copyright">&copy; Copyright 450ml - 2020
+        </footer>
+    </body>
+</html>
