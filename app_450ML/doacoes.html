@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>Agenda de doações - 450ml</title>
+
+        <link href="reset.css" rel="stylesheet" >
+        <link href="cabecalho-rodape.css" rel="stylesheet">
+        <link href="doacoes.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class="pre-cabecalho">
+                <nav>
+                    <ul class="navegacao">
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </u>
+                </nav>
+            </div>
+
+            <div class="cabecalho">
+                <img id="logo-cabecalho" src="imagens\logo.png" alt="Logo do app 450ml">
+                
+                <nav>
+                    <ul class="navegacao">
+                        <li><a href="index.html">HOME</a></li>
+                        <li><a href="doacoes.html">DOAÇÕES</a></li>
+                        <li><a href="cadastro.html">CADASTRO</a></li>
+                        <li><a href="instituicoes.html">INSTITUIÇÕES</a></li>
+                        <li><a href="campanhas.html">CAMPANHAS</a></li>
+                        <li><a href="login.html">Sair</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <h1>Agenda de doações</h1>
+
+            <form>
+                <section>
+                    <legend>Próxima doação agendada:</legend>
+                    <br>
+                    <p>Instituição: Hemoclínica BSB</p>
+                    <p>UF: DF</p>
+                    <br>
+                    <p>Data: 27/06/2020</p>
+                    <br>
+                    <p>Horário: 09:15</p>
+                    <br>
+
+                    <input type="submit" value="Cancelar" class="botao">                 
+                </section>
+            </form>
+
+            <form>
+                <section>
+                    <legend>Agendar doação:</legend>
+
+                    <legend>*UF:</legend>
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espirito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                        
+                    <legend>*Instituição:</legend>
+                    <select required>
+                        <option value="">Selecione</option>
+                        <option value="001">Hemocentro Brasilia</option>
+                        <option value="002">Hemoclínica BSB</option>
+                        <option value="003">Hemocentro Distrito Federal</option>
+                        <option value="004">Fundação Pró Sangue DF</option>                        
+                    </select>                
+
+                    <legend>*Data:</legend>
+                    <input type="date" id="data" class="input-padrao" required>
+
+                    <legend>*Hora:</legend>
+                    <input type="time" id="hora" class="input-padrao" required>
+                    <br>
+
+                    <input type="submit" value="Agendar" class="botao">  
+                </section>
+            </form>
+
+            <form>
+                <section>
+                    <legend>Últimas doações:</legend>
+                    <br>
+
+                    <p>Instituição: Hemocentro Distrito Federal</p>
+                    <p>UF: DF</p>
+                    <br>
+                    <p>Data: 14/04/2020</p>
+                    <br>
+                    <p>Horário: 15:00</p>
+                    <br>
+                    <br>
+                    <br>
+
+                    <p>Instituição: Hemoclínica BSB</p>
+                    <p>UF: DF</p>
+                    <br>
+                    <p>Data: 07/01/2020</p>
+                    <br>
+                    <p>Horário: 10:30</p>
+                    <br>
+               
+                </section>
+            </form>
+            
+        </main>
+        
+        <footer>
+            <img id="logo-rodape" src="imagens\logo.png" alt="Logo do app 450ml">
+            <p class="copyright">&copy; Copyright 450ml - 2020
+        </footer>
+    </body>
+</html>
