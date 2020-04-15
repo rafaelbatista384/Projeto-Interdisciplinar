@@ -6,34 +6,12 @@
         
         <title>Login - 450ml</title>
 
-        <link href="reset.css" rel="stylesheet" >
-        <link href="cabecalho-rodape.css" rel="stylesheet">
-        <link href="login.css" rel="stylesheet">
+        <link href="css/reset.css" rel="stylesheet" >
+        <link href="css/cabecalho-rodape.css" rel="stylesheet">
+        <link href="css/login.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500&display=swap" rel="stylesheet">
         
-        <script src="jquery-3.4.1.min.js"></script>
-
-        <script>            
-            $(document).ready(function(){ 
-                $(".login-usuario").hide();
-                $(".login-instituicao").hide();
-
-                $("#usuario").click(function(event){
-                event.preventDefault();
-                $(".login-usuario").show(1500);
-                $(".login-instituicao").hide(700);
-                $("#capa").hide();
-                });
-
-                $("#instituicao").click(function(event){
-                event.preventDefault();
-                $(".login-usuario").hide(700);
-                $(".login-instituicao").show(1500);
-                $("#capa").hide();
-                });
-            });
-        </script>
-        
+               
     </head>
 
     <body>
@@ -107,6 +85,9 @@
             </form>            
         </main>
         
+        <script src="js/jquery-3.4.1.min.js"></script>
+        <script src="js/principal.js"></script>
+
         <footer>
             <img id="logo-rodape" src="imagens\logo.png" alt="Logo do app 450ml">
             <p class="copyright">&copy; Copyright 450ml - 2020
