@@ -58,12 +58,12 @@
                 </section>
             </form>
 
-            <form>
+            <form id="agendar">
                 <section>
                     <legend>Agendar doação:</legend>
 
                     <legend>*UF:</legend>
-                    <select required>
+                    <select name="uf" >
                         <option value="">Selecione</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -95,7 +95,7 @@
                     </select>
                         
                     <legend>*Instituição:</legend>
-                    <select required>
+                    <select name="instituicao" >
                         <option value="">Selecione</option>
                         <option value="001">Hemocentro Brasilia</option>
                         <option value="002">Hemoclínica BSB</option>
@@ -104,13 +104,13 @@
                     </select>                
 
                     <legend>*Data:</legend>
-                    <input type="date" id="data" class="input-padrao" required>
+                    <input type="date" id="data" name="data" class="input-padrao" >
 
                     <legend>*Hora:</legend>
-                    <input type="time" id="hora" class="input-padrao" required>
+                    <input type="time" id="hora" name="hora" class="input-padrao" >
                     <br>
 
-                    <input type="submit" value="Agendar" class="botao">  
+                    <button id="agendar-doacao" class="botao">Agendar</button>
                 </section>
             </form>
 
@@ -147,5 +147,7 @@
             <br>
             <p class="copyright">&copy; Copyright 450ml - 2020</p>
         </footer>
+
+        <script src="js/doacao.js"></script>
     </body>
 </html>
