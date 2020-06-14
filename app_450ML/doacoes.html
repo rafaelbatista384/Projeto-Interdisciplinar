@@ -42,20 +42,10 @@
         <main>
             <h1>Agenda de doações</h1>
 
-            <form>
-                <section>
-                    <legend>Próxima doação agendada:</legend>
-                    <br>
-                    <p>Instituição: Hemoclínica BSB</p>
-                    <p>UF: DF</p>
-                    <br>
-                    <p>Data: 27/06/2020</p>
-                    <br>
-                    <p>Horário: 09:15</p>
-                    <br>
+            <form id="proximaDoacao">
 
-                    <input type="submit" value="Cancelar" class="botao">                 
-                </section>
+                <!-- Conteudo em javascript -->
+                
             </form>
 
             <form id="agendar">
@@ -63,7 +53,7 @@
                     <legend>Agendar doação:</legend>
 
                     <legend>*UF:</legend>
-                    <select name="uf" >
+                    <select id="uf" >
                         <option value="">Selecione</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -95,7 +85,7 @@
                     </select>
                         
                     <legend>*Instituição:</legend>
-                    <select name="instituicao" >
+                    <select id="instituicao" >
                         <option value="">Selecione</option>
                         <option value="001">Hemocentro Brasilia</option>
                         <option value="002">Hemoclínica BSB</option>
@@ -104,10 +94,10 @@
                     </select>                
 
                     <legend>*Data:</legend>
-                    <input type="date" id="data" name="data" class="input-padrao" >
+                    <input type="date" id="data" class="input-padrao" >
 
                     <legend>*Hora:</legend>
-                    <input type="time" id="hora" name="hora" class="input-padrao" >
+                    <input type="time" id="hora" class="input-padrao" >
                     <br>
 
                     <button id="agendar-doacao" class="botao">Agendar</button>

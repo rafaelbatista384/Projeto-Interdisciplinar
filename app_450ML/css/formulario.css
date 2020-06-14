@@ -6,7 +6,7 @@ body {
     background-color: #F0FFF0;
 }
 
-/* CCS - Cadastro */
+/* CCS - pre-triagem */
 h1 {
     font-size: 3em;
     color: rgb(158,11,15);
@@ -15,7 +15,7 @@ h1 {
 }
 
 section {
-    width: 35%;
+    width: 50%;
     margin: 3em auto;
     padding: 2em;
     border: .2em solid #CCC;
@@ -29,8 +29,13 @@ section label, section legend {
     padding-right: .5em;
 }
 
+section label, section legend {
+    margin-top: 1em;
+}
+
+
 section legend:first-child {
-    margin-bottom: 1em;
+    margin-bottom: .5em;
     color: rgb(158,11,15);
 }
 
@@ -41,11 +46,7 @@ section input, select {
     border: .1em solid #CCC;
     -webkit-border-radius: .5em;
     height: 2em;    
-    width: auto;
-}
-
-section input:last-child {
-    margin-bottom: .5em;
+    width: 20%;
 }
 
 section:hover {
@@ -64,27 +65,40 @@ input:hover {
     padding-left: 1em;
 }
 
-body p {
-    font-size: 2em;
-    display: inline-block;
-    margin-right: 1em;
-    margin-bottom: 1em;
+.checkbox {
+    display: inline;
+    font-size: 1.5em;
+    box-shadow: none;
+}
+
+.checkbox input{
+    display: inline;   
+    width: 1.3em;
+    margin: 0 0 0 1em;
+    vertical-align: text-top;
+    box-shadow: none;
+}
+
+#perguntas {
+    width: 90%;
 }
 
 .botao {
-    width: auto;
-    height: 2em;
-    margin: .5em 1em 1em 0;
-    padding: 0 .5em;
+    width: 50%;
+    margin: .5em 25% 2em 25%;
+    padding: .5em 0;
     background: #EEC900;
     color: #FFF;
     font-weight: bold;
     font-size: 2em;
     border: none;
     border-radius: .5em;
+    transition: 1s all;
+    cursor: pointer;
 }
 
 .botao:hover {
-    background: orange;   
+    background: orange;
+    transform: scale(1.05);    
     border: none;
 }
