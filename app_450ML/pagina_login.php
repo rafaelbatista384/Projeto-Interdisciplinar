@@ -1,3 +1,11 @@
+<?php
+ 
+$email = (isset($_COOKIE['CookieEmail'])) ? base64_decode($_COOKIE['CookieEmail']) : '';
+$senha = (isset($_COOKIE['CookieSenha'])) ? base64_decode($_COOKIE['CookieSenha']) : '';
+$lembrete = (isset($_COOKIE['CookieLembrete'])) ? base64_decode($_COOKIE['CookieLembrete']) : '';
+$checked = ($lembrete == 'SIM') ? 'checked' : '';
+ 
+?>
 <!DOCTYPE html>
 
 <html lang="pt-br">
@@ -38,19 +46,19 @@
 
             <img id="capa" src="imagens\capa.jpg" alt="Imagem simbolizando uma doação de sangue">            
 
-            <form>
+            <form action="php/login.php" method="POST">
                 <section class="login-usuario">
                     <legend>Login doador:</legend>
-                    <input placeholder="E-mail" type="email" id="email" class="input-padrao" required>
-                    <input placeholder="Senha" type="password" id="senha" class="input-padrao" required>
+                    <input placeholder="E-mail" type="email" id="email" name="email" value="<?=$email?>" class="input-padrao" required>
+                    <input placeholder="Senha" type="password" id="senha" name="senha" value="<?=$senha?>" class="input-padrao" required>
                     <br>
                     
-                    <input type="submit" value="Login" class="botao">
-
                     <label class="checkbox">
-                        <input type="checkbox" id="lembrar" class="input-padrao" checked>
+                        <input type="checkbox" id="lembrete" name="lembrete" value="SIM" class="input-padrao" <?=$checked?>>
                         Lembrar-me
                     </label>                    
+
+                    <input type="submit" value="Login" class="botao">
 
                     <nav>
                         <ul class="navegacao-login">
@@ -69,10 +77,11 @@
                     <br>
                     
                     <input type="submit" value="Login" class="botao">
-                    
+                    <br>
+
                     <label class="checkbox">
-                        <input type="checkbox" class="input-padrao" checked>
-                        Lembrar-me
+                    <input type="checkbox" class="input-padrao" checked>
+                    Lembrar-me
                     </label>
                     
                     <nav>
