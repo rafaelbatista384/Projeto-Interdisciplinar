@@ -26,37 +26,4 @@ echo "Inclusão efetuada com sucesso";
     echo "Erro";
 };
 
-
-echo "Nome: $nome";
-echo "<br>";
-echo "Sobrenome: $sobrenome";
-echo "<br>";
-echo "Cpf: $cpf";
-echo "<br>";
-echo "Data de Nascimento: $dt_nsct";
-echo "<br>";
-echo "Tipo Sanguíneo: $tp_sanguineo";
-echo "<br>";
-echo "Sexo: $sexo";
-echo "<br>";
-echo "Logradouro: $logradouro";
-echo "<br>";
-echo "Numero: $numero";
-echo "<br>";
-echo "Complemento: $complemento";
-echo "<br>";
-echo "Cidade: $cidade";
-echo "<br>";
-echo "UF: $uf";
-echo "<br>";
-echo "Cep: $cep";
-echo "<br>";
-echo "Email: $email";
-echo "<br>";
-echo "Celular: $celular";
-echo "<br>";
-echo "Senha: $senha";
-echo "<br>";
-
-
 ?>
