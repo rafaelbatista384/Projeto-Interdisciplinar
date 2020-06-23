@@ -45,15 +45,18 @@
             <form action="php/cadastro.php" method="POST">
                 <section>
                     <legend>Dados pessoais:</legend>
+                    <legend>*Nome:</legend>
                     <input placeholder="*Nome" type="text" id="nome" name="nome" class="input-padrao" required>
+                    <br>
+                    <legend>*Sobrenome:</legend>
                     <input placeholder="*Sobrenome" type="text" id="sobrenome" name="sobrenome" class="input-padrao" required>
-                    
+                    <br>
                     <legend>*CPF:</legend>
                     <input placeholder="XXX.XXX.XXX-XX" type="number" id="cpf" name="cpf" class="input-padrao" required>
                                     
                     <legend>*Data de nascimento:</legend>
                     <input type="date" id="dt_nsct" name="dt_nsct" class="input-padrao" required>
-
+                    <br>
                     <legend>*Tipo sanguíneo:</legend>
                     <select required id="tp_sanguineo" name="tp_sanguineo">
                         <option value="">Selecione</option>                        
@@ -82,10 +85,15 @@
                 
                 <section>
                     <legend>Endereço:</legend>
+                    <legend>Logradouro:</legend>
                     <input placeholder="*Logradouro" type="text" id="logradouro" name="logradouro" class="input-padrao" required>
-                    <input placeholder="*Numero" type="number" id="numero" name="numero" class="input-padrao" required>
                     <br>
+                    <legend>Nº:</legend>
+                    <input placeholder="*Numero" type="number" id="numero" name="numero" class="input-padrao" required>
+                    <legend>Complemento:</legend>
                     <input placeholder="Complemento" type="text" id="complemento" name="complemento" class="input-padrao">
+                    <br>
+                    <legend>Cidade:</legend>
                     <input placeholder="*Cidade" type="text" id="cidade" name="cidade" class="input-padrao" required>
                     
                     <legend>*UF:</legend>

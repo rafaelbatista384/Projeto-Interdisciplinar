@@ -19,8 +19,6 @@
   include_once "conexao_bd/conectabd.inc.php";
 
   echo "<h1>Consulta Cadastro Doador</h1>";
-  
-  print_r($_COOKIE["CookieID"]);
 
   $cod_doador = $_COOKIE["CookieID"];
 
@@ -81,20 +79,22 @@
         <main>
             <h1>Cadastro de doador</h1>
 
-            <form action="php/cadastro.php" method="POST">
+            <form action="alterar.php" method="POST">
                 <section>
                     <legend>Dados pessoais:</legend>
+                    <br>
                     <legend>*Nome:</legend>
                     <input type="text" id="nome" name="nome" class="input-padrao" value="<?php echo($nome);?>" required>
+                    <br>
                     <legend>*Sobrenome:</legend>
                     <input type="text" id="sobrenome" name="sobrenome" class="input-padrao" value="<?php echo($sobrenome);?>" required>
-                    
+                    <br>
                     <legend>*CPF:</legend>
                     <input type="number" id="cpf" name="cpf" class="input-padrao" value="<?php echo($cpf);?>" required>
                                     
                     <legend>*Data de nascimento:</legend>
                     <input type="date" id="dt_nsct" name="dt_nsct" class="input-padrao" value="<?php echo($data_de_nascimento);?>" required>
-
+                    <br>
                     <legend>*Tipo sanguíneo:</legend>
                     <select required id="tp_sanguineo" name="tp_sanguineo" value="<?php echo($cd_tp_sanguineo);?>">
                         <option value="">Selecione</option>                        
@@ -123,10 +123,17 @@
                 
                 <section>
                     <legend>Endereço:</legend>
-                    <input type="text" id="logradouro" name="logradouro" class="input-padrao" value="<?php echo($logradouro);?>" required>
-                    <input type="number" id="numero" name="numero" class="input-padrao" value="<?php echo($numero);?>" required>
                     <br>
+                    <legend>Logradouro:</legend>
+                    <input type="text" id="logradouro" name="logradouro" class="input-padrao" value="<?php echo($logradouro);?>" required>
+                    <br>
+                    <legend>Nº:</legend>
+                    <input type="number" id="numero" name="numero" class="input-padrao" value="<?php echo($numero);?>" required>
+                    
+                    <legend>Complemento:</legend>
                     <input type="text" id="complemento" name="complemento" class="input-padrao" value="<?php echo($complemento);?>">
+                    <br>
+                    <legend>Cidade:</legend>
                     <input type="text" id="cidade" name="cidade" class="input-padrao" value="<?php echo($cidade);?>" required>
                     
                     <legend>*UF:</legend>
@@ -167,6 +174,7 @@
 
                 <section>
                     <legend>Contato:</legend>
+                    <br>
                     <label for="email">*E-mail:</label>
                     <input type="email" id="email" name="email" class="input-padrao" value="<?php echo($email);?>" required>
                     <label class="checkbox">
@@ -187,11 +195,17 @@
                     <legend>Nova senha:</legend>
                     <input placeholder="Informe a sua senha de 6 a 10 caracteres" type="password" id="senha" name="senha" class="input-padrao" required>
                     <br>
+                    <legend>Confirmar senha:</legend>
                     <input placeholder="Confirme a sua senha" type="password" id="senhaConf" name="senhaConf" class="input-padrao" required>                    
                 </section>
 
-                <input type="submit" value="Enviar formulário" class="botao">
+                <input type="submit" value="Alterar Dados" class="botao">
             </form>
+
+            <form action="deletar.php" method="POST">
+                <input type="submit" value="Deletar Cadastro" class="botao">
+            </form>
+
         </main>
         
         <footer>

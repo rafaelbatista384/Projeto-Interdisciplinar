@@ -1,5 +1,6 @@
 <?php
 
+$cod_doador = $_COOKIE["CookieID"];
 $nome = $_REQUEST["nome"];
 $sobrenome = $_REQUEST["sobrenome"];
 $cpf = $_REQUEST["cpf"];
@@ -18,10 +19,9 @@ $senha = $_REQUEST["senha"];
 
 include_once "conexao_bd/conectabd.inc.php";
 
-$query = "INSERT INTO `doador` (nome, sobrenome, data_de_nascimento, cpf, cd_tp_sanguineo, telefone, email, sigla_uf, senha, logradouro, numero, complemento, cidade, cep)
-VALUES ('$nome', '$sobrenome', '$dt_nsct', '$cpf', '$tp_sanguineo', '$celular', '$email', '$uf', '$senha', '$logradouro', '$numero', '$complemento', '$cidade', '$cep');";
+$query = "UPDATE `doador` SET nome='$nome', sobrenome='$sobrenome', data_de_nascimento='$dt_nsct', sexo='$sexo',cpf='$cpf', cd_tp_sanguineo='$tp_sanguineo', telefone='$celular', email='$email', sigla_uf='$uf', senha='$senha', logradouro='$logradouro', numero='$numero', complemento='$complemento', cidade='$cidade', cep='$cep' WHERE cod_doador = '$cod_doador';";
 if ($result = mysqli_query($link, $query)) {
-echo "<script>window.location = '../pagina_login.php'</script>";
+echo "<script>window.location = 'revisao_cadastro.php'</script>";
 } else {
     echo "Erro";
 };
