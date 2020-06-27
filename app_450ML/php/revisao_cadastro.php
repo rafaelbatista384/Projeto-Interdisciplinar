@@ -178,7 +178,7 @@
                     <label for="email">*E-mail:</label>
                     <input type="email" id="email" name="email" class="input-padrao" value="<?php echo($email);?>" required>
                     <label class="checkbox">
-                        <input type="checkbox" class="input-padrao" checked>
+                        <input type="checkbox" class="input-padrao" name="notif_email[1]" value="1" checked>
                         Aceito receber notificações por e-mail
                     </label>
                     <br>
@@ -186,7 +186,7 @@
                     <label for="celular">Celular:</label>
                     <input type="tel" id="celular" name="celular" class="input-padrao" value="<?php echo($telefone);?>" required>
                     <label class="checkbox">
-                        <input type="checkbox" class="input-padrao" checked>
+                        <input type="checkbox" class="input-padrao" name="notif_sms[1]" value="1" checked>
                         Aceito receber notificações por SMS
                     </label>
                 </section>

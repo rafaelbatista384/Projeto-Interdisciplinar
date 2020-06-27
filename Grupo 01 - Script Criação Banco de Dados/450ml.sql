@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 16-Jun-2020 às 16:36
+-- Tempo de geração: 27-Jun-2020 às 01:46
 -- Versão do servidor: 10.4.11-MariaDB
 -- versão do PHP: 7.2.31
 
@@ -70,8 +70,20 @@ CREATE TABLE `doador` (
   `numero` char(10) DEFAULT NULL,
   `complemento` char(10) DEFAULT NULL,
   `cidade` varchar(50) DEFAULT NULL,
-  `cep` int(8) DEFAULT NULL
+  `cep` int(8) DEFAULT NULL,
+  `notificacao_email` tinyint(1) DEFAULT NULL,
+  `notificacao_sms` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `doador`
+--
+
+INSERT INTO `doador` (`cod_doador`, `nome`, `sobrenome`, `data_de_nascimento`, `sexo`, `cpf`, `cd_tp_sanguineo`, `telefone`, `email`, `sigla_uf`, `senha`, `logradouro`, `numero`, `complemento`, `cidade`, `cep`, `notificacao_email`, `notificacao_sms`) VALUES
+(4, 'Rodrigo', 'Piaui Dias', '2000-08-15', 'M', 11122233344, 3, 61999922211, 'rodrigo@teste.com', 'GO', '123456', 'Quadra 05, Conjunto 02', '10', 'Casa 10', 'Planaltina', 71200300, 0, 0),
+(5, 'Benedito', 'Aragão', '1975-07-01', 'M', 44455566677, 4, 61999922211, 'bene@teste.com', 'DF', '123456', 'Chácara', '15', 'Ponte Alta', 'Gama', 71850200, 0, 0),
+(6, 'Rafael', 'Batista', '1993-03-05', 'M', 77788899900, 7, 61981382931, 'rafael@teste.com', 'DF', '123456', 'Av. Castanheiras', '4150', 'Apto 408', 'Aguas Claras', 71936250, 0, 1),
+(7, 'Gustavo', 'Corsato', '1990-09-20', 'M', 99988800011, 6, 61999922211, 'gustavo@teste.com', 'DF', '123456', 'Bloca B', '20', 'Apto 207', 'Asa Sul', 71850200, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -145,8 +157,33 @@ CREATE TABLE `telefone_resp` (
 
 CREATE TABLE `tipo_sanguineo` (
   `cd_tipo` int(11) NOT NULL,
-  `tp_sanguineo` char(2) DEFAULT NULL
+  `tp_sanguineo` char(3) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Criar Usuário rafaelBatista
+--
+
+CREATE USER IF NOT EXISTS 'rafaelBatista'@'%' IDENTIFIED BY 'root123';
+GRANT ALL PRIVILEGES ON *.* TO 'rafaelBatista'@'%' IDENTIFIED BY PASSWORD '*FAAFFE644E901CFAFAEC7562415E5FAEC243B8B2' WITH GRANT OPTION;
+GRANT ALL PRIVILEGES ON `450ml`.* TO 'rafaelBatista'@'%';
+
+-- --------------------------------------------------------
+
+--
+-- Extraindo dados da tabela `tipo_sanguineo`
+--
+
+INSERT INTO `tipo_sanguineo` (`cd_tipo`, `tp_sanguineo`) VALUES
+(0, 'NI'),
+(1, 'A+'),
+(2, 'A-'),
+(3, 'B+'),
+(4, 'B-'),
+(5, 'AB+'),
+(6, 'AB-'),
+(7, 'O+'),
+(8, 'O-');
 
 -- --------------------------------------------------------
 
@@ -158,6 +195,39 @@ CREATE TABLE `uf` (
   `sigla` char(2) NOT NULL,
   `nome` char(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Extraindo dados da tabela `uf`
+--
+
+INSERT INTO `uf` (`sigla`, `nome`) VALUES
+('AC', 'Acre'),
+('AL', 'Alagoas'),
+('AM', 'Amazonas'),
+('AP', 'Amapá'),
+('BA', 'Bahia'),
+('CE', 'Ceará'),
+('DF', 'Distrito Federal'),
+('ES', 'Espírito Santo'),
+('GO', 'Goiás'),
+('MA', 'Maranhão'),
+('MG', 'Minas Gerais'),
+('MS', 'Mato Grosso do Sul'),
+('MT', 'Mato Grosso'),
+('PA', 'Pará'),
+('PB', 'Paraíba'),
+('PE', 'Pernanbuco'),
+('PI', 'Piauí'),
+('PR', 'Paraná'),
+('RJ', 'Rio de Janeiro'),
+('RN', 'Rio Grande do Norte'),
+('RO', 'Rondônia'),
+('RR', 'Roraima'),
+('RS', 'Rio Grande do Sul'),
+('SC', 'Santa Catarina'),
+('SE', 'Sergipe'),
+('SP', 'São Paulo'),
+('TO', 'Tocantins');
 
 --
 -- Índices para tabelas despejadas
@@ -176,8 +246,8 @@ ALTER TABLE `campanha`
 ALTER TABLE `doacao`
   ADD PRIMARY KEY (`cod_doacao`),
   ADD KEY `FK_Doacao_2` (`cod_hemocentro`),
-  ADD KEY `FK_Doacao_3` (`cod_doador`),
-  ADD KEY `FK_Doacao_4` (`cod_campanha`);
+  ADD KEY `FK_Doacao_4` (`cod_campanha`),
+  ADD KEY `FK_Doacao_3` (`cod_doador`);
 
 --
 -- Índices para tabela `doador`
@@ -229,6 +299,16 @@ ALTER TABLE `tipo_sanguineo`
 --
 ALTER TABLE `uf`
   ADD PRIMARY KEY (`sigla`);
+
+--
+-- AUTO_INCREMENT de tabelas despejadas
+--
+
+--
+-- AUTO_INCREMENT de tabela `doador`
+--
+ALTER TABLE `doador`
+  MODIFY `cod_doador` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Restrições para despejos de tabelas
